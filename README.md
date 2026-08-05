@@ -91,3 +91,7 @@ Uses the MAMP socket automatically when present.
 - Super Admin role is bypass-granted all permissions and cannot be downgraded through the UI.
 - Avatar/attachment uploads validate MIME/extension and size.
 - All delete actions require CSRF and confirmation via SweetAlert2.
+
+<img src="https://raw.githubusercontent.com/cai-ro-coders/Employee-Management-System-Using-PHP-MySQL-PDO-and-MVC-architecture---Complete-Project/refs/heads/main/1.png" alt="Cairocoders Ednalan">
+<img src="https://raw.githubusercontent.com/cai-ro-coders/Employee-Management-System-Using-PHP-MySQL-PDO-and-MVC-architecture---Complete-Project/refs/heads/main/2.png" alt="Cairocoders Ednalan">
+<img src="https://raw.githubusercontent.com/cai-ro-coders/Employee-Management-System-Using-PHP-MySQL-PDO-and-MVC-architecture---Complete-Project/refs/heads/main/3.png" alt="Cairocoders Ednalan">
