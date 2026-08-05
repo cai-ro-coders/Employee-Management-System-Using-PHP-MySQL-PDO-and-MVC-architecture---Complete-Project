@@ -1,0 +1,45 @@
+<?php
+declare(strict_types=1);
+
+namespace App\Core;
+
+/**
+ * Simple dot-notation config repository.
+ */
+class Config
+{
+    protected static array $items = [];
+
+    public static function load(array $items): void
+    {
+        self::$items = $items;
+    }
+
+    public static function get(string $key, $default = null)
+    {
+        $segments = explode('.', $key);
+        $value = self::$items;
+
+        foreach ($segments as $segment) {
+            if (is_array($value) && array_key_exists($segment, $value)) {
+                $value = $value[$segment];
+            } else {
+                return $default;
+            }
+        }
+        return $value;
+    }
+
+    public static function set(string $key, $value): void
+    {
+        $segments = explode('.', $key);
+        $ref = &self::$items;
+        foreach ($segments as $segment) {
+            if (!isset($ref[$segment]) || !is_array($ref[$segment])) {
+                $ref[$segment] = [];
+            }
+            $ref = &$ref[$segment];
+        }
+        $ref = $value;
+    }
+}
